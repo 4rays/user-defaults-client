@@ -5,28 +5,28 @@ import Foundation
 @DependencyClient
 public struct UserDefaultsClient: Sendable {
   public var string: @Sendable (UserDefaultsKey) async throws -> String?
-  public var setString: @Sendable (_ key: UserDefaultsKey, String) async throws -> Void
+  public var setString: @Sendable (_ key: UserDefaultsKey, String?) async throws -> Void
 
   public var int: @Sendable (UserDefaultsKey) async throws -> Int?
-  public var setInt: @Sendable (_ key: UserDefaultsKey, Int) async throws -> Void
+  public var setInt: @Sendable (_ key: UserDefaultsKey, Int?) async throws -> Void
 
   public var bool: @Sendable (UserDefaultsKey) async throws -> Bool?
-  public var setBool: @Sendable (_ key: UserDefaultsKey, Bool) async throws -> Void
+  public var setBool: @Sendable (_ key: UserDefaultsKey, Bool?) async throws -> Void
 
   public var double: @Sendable (UserDefaultsKey) async throws -> Double?
-  public var setDouble: @Sendable (_ key: UserDefaultsKey, Double) async throws -> Void
+  public var setDouble: @Sendable (_ key: UserDefaultsKey, Double?) async throws -> Void
 
   public var array: @Sendable (UserDefaultsKey) async throws -> [Any]?
-  public var setArray: @Sendable (_ key: UserDefaultsKey, [Any]) async throws -> Void
+  public var setArray: @Sendable (_ key: UserDefaultsKey, [Any]?) async throws -> Void
 
   public var data: @Sendable (UserDefaultsKey) async throws -> Data?
-  public var setData: @Sendable (_ key: UserDefaultsKey, Data) async throws -> Void
+  public var setData: @Sendable (_ key: UserDefaultsKey, Data?) async throws -> Void
 
   public var date: @Sendable (UserDefaultsKey) async throws -> Date?
-  public var setDate: @Sendable (_ key: UserDefaultsKey, Date) async throws -> Void
+  public var setDate: @Sendable (_ key: UserDefaultsKey, Date?) async throws -> Void
 
   public var dictionary: @Sendable (UserDefaultsKey) async throws -> [String: Any]?
-  public var setDictionary: @Sendable (_ key: UserDefaultsKey, [String: Any]) async throws -> Void
+  public var setDictionary: @Sendable (_ key: UserDefaultsKey, [String: Any]?) async throws -> Void
 }
 
 extension DependencyValues {
